@@ -1,0 +1,155 @@
+{
+  "conjoining_words": {
+    "and": {
+      "slovak": "a",
+      "english": "and"
+    },
+    "but": {
+      "slovak": "ale",
+      "english": "but"
+    },
+    "or": {
+      "slovak": "alebo",
+      "english": "or"
+    },
+    "because": {
+      "slovak": "pretože",
+      "english": "because"
+    },
+    "although": {
+      "slovak": "hoci",
+      "english": "although"
+    },
+    "if": {
+      "slovak": "ak",
+      "english": "if"
+    },
+    "when": {
+      "slovak": "keď",
+      "english": "when"
+    },
+    "while": {
+      "slovak": "kým",
+      "english": "while"
+    },
+    "so": {
+      "slovak": "takže",
+      "english": "so"
+    },
+    "therefore": {
+      "slovak": "preto",
+      "english": "therefore"
+    },
+    "with": {
+      "slovak": "s",
+      "english": "with"
+    },
+    "as": {
+      "slovak": "ako",
+      "english": "as"
+    },
+    "nor": {
+      "slovak": "ani",
+      "english": "nor"
+    },
+    "yet": {
+      "slovak": "avšak",
+      "english": "yet"
+    }
+  },
+  "animals": {
+    "dog": {
+      "slovak": "pes",
+      "english": "dog"
+    },
+    "cat": {
+      "slovak": "mačka",
+      "english": "cat"
+    },
+    "horse": {
+      "slovak": "kôň",
+      "english": "horse"
+    },
+    "cow": {
+      "slovak": "krava",
+      "english": "cow"
+    },
+    "pig": {
+      "slovak": "prasa",
+      "english": "pig"
+    },
+    "sheep": {
+      "slovak": "ovca",
+      "english": "sheep"
+    },
+    "goat": {
+      "slovak": "koza",
+      "english": "goat"
+    },
+    "chicken": {
+      "slovak": "kura",
+      "english": "chicken"
+    },
+    "duck": {
+      "slovak": "kačica",
+      "english": "duck"
+    },
+    "rabbit": {
+      "slovak": "králik",
+      "english": "rabbit"
+    },
+    "bear": {
+      "slovak": "medveď",
+      "english": "bear"
+    },
+    "fox": {
+      "slovak": "líška",
+      "english": "fox"
+    },
+    "wolf": {
+      "slovak": "vlk",
+      "english": "wolf"
+    },
+    "deer": {
+      "slovak": "jeleň",
+      "english": "deer"
+    },
+    "mouse": {
+      "slovak": "myš",
+      "english": "mouse"
+    },
+    "bird": {
+      "slovak": "vták",
+      "english": "bird"
+    },
+    "fish": {
+      "slovak": "ryba",
+      "english": "fish"
+    }
+  },
+  "greetings":{
+    "hello": {
+        "type": "formal",
+        "slovak": ["dobrý deň", "zdravím", "vítam vás"],
+        "english":["good day", "greetings", "i welcome you"]
+    },
+    "hi":{
+        "type": "informal",
+        "slovak": ["ahoj", "čau", "nazdar", "servus"],
+        "english": ["hello", "hello", "hi", "hello"]
+    }
+  },
+  "farewells": {
+    "goodbye": {
+      "type": "formal",
+      "slovak": ["dovidenia", "zbohom", "prajem pekný deň"],
+      "english": ["good bye", "farewell", "i wish you a nice day"]
+    },
+    "bye": {
+      "type": "informal",
+      "slovak": ["ahoj", "čau", "maj sa", "zatím", "papa"],
+      "english": ["bye", "bye", "see you", "see you", "bye bye" ]
+    }
+  }
+}
+
