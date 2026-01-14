@@ -1,0 +1,61 @@
+{
+  "conjoining_words": {
+    "and": { "norwegian": "og", "english": "and" },
+    "but": { "norwegian": "men", "english": "but" },
+    "or": { "norwegian": "eller", "english": "or" },
+    "because": { "norwegian": "fordi", "english": "because" },
+    "although": { "norwegian": "selv om", "english": "although" },
+    "if": { "norwegian": "hvis", "english": "if" },
+    "when": { "norwegian": "når", "english": "when" },
+    "while": { "norwegian": "mens", "english": "while" },
+    "so": { "norwegian": "så", "english": "so" },
+    "therefore": { "norwegian": "derfor", "english": "therefore" },
+    "with": { "norwegian": "med", "english": "with" },
+    "as": { "norwegian": "som", "english": ["as", "how"] },
+    "nor": { "norwegian": "heller ikke", "english": "nor" },
+    "yet": { "norwegian": "likevel", "english": "yet" }
+  },
+  "animals": {
+    "dog": { "norwegian": "hund", "english": "dog" },
+    "cat": { "norwegian": "katt", "english": "cat" },
+    "horse": { "norwegian": "hest", "english": "horse" },
+    "cow": { "norwegian": "ku", "english": "cow" },
+    "pig": { "norwegian": "gris", "english": "pig" },
+    "sheep": { "norwegian": "sau", "english": "sheep" },
+    "goat": { "norwegian": "geit", "english": "goat" },
+    "chicken": { "norwegian": "kylling", "english": "chicken" },
+    "duck": { "norwegian": "and", "english": "duck" },
+    "rabbit": { "norwegian": "kanin", "english": "rabbit" },
+    "bear": { "norwegian": "bjørn", "english": "bear" },
+    "fox": { "norwegian": "rev", "english": "fox" },
+    "wolf": { "norwegian": "ulv", "english": "wolf" },
+    "deer": { "norwegian": "hjort", "english": "deer" },
+    "mouse": { "norwegian": "mus", "english": "mouse" },
+    "bird": { "norwegian": "fugl", "english": "bird" },
+    "fish": { "norwegian": "fisk", "english": "fish" }
+  },
+  "greetings": {
+    "hello": {
+      "type": "formal",
+      "norwegian": ["god dag", "hallo", "velkommen"],
+      "english": ["good day", "greetings", "i welcome you"]
+    },
+    "hi": {
+      "type": "informal",
+      "norwegian": ["hei", "hallo", "heisann", "yo"],
+      "english": ["hello", "hello", "hi", "hello"]
+    }
+  },
+  "farewells": {
+    "goodbye": {
+      "type": "formal",
+      "norwegian": ["ha det bra", "farvel", "ha en fin dag"],
+      "english": ["good bye", "farewell", "i wish you a nice day"]
+    },
+    "bye": {
+      "type": "informal",
+      "norwegian": ["ha det", "snakkes", "vi sees", "hadet", "ha det fint"],
+      "english": ["bye", "bye", "see you", "see you", "bye bye"]
+    }
+  }
+}

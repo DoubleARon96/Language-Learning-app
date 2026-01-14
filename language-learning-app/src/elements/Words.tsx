@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 import slovakEnglishWords from '../assets/json/english-to-slovak.json';
-
+import norwegianEnglish from '..assets/json/english-to-norwegian .json';
 //this defines the shape of a data object in type script
 type WordEntry = {
   english: string;
   slovak: string;
+  norwegian: string;
 };
 // this makes worldmap have a set data as a string and that string will be from wordentry
 type WordMap = Record<string, WordEntry>;
