@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react';
 import slovakEnglishWords from '../assets/json/english-to-slovak.json';
-import norwegianEnglishWords from '..assets/json/english-to-norwegian.json';
+
 //this defines the shape of a data object in type script
 type WordEntry = {
   english: string;
   slovak: string;
-  norwegian: string;
 };
-// this makes wordmap have a set data as a string and that string will be from word entry
+// this makes worldmap have a set data as a string and that string will be from wordentry
 type WordMap = Record<string, WordEntry>;
 /**
  * the T lets it accept any type
@@ -39,17 +38,12 @@ function WordQuiz() {
 
   const generateQuestion = () => {
     //gets the words
-    const allWordsslovak: WordEntry[] = Object.values(slovakEnglishWords);
-    const allWordsnorwegian: WordEntry[] = Object.values(norwegianEnglishWords);
+    const allWords: WordEntry[] = Object.values(slovakEnglishWords.animals);
     //choses the correct one
-    const allEnglishKeys = Object.keys(slovakEnglishWords);
-    const randomKey = allEnglishKeys[Math.floor(Math.random() * allEnglishKeys.length)];
-    const correct:WordEntry = {
-        english: randomKey,
-        slovak : slovakEnglishWords[randomKey].slovak,
-        norwegian: norwegianEnglishWords[randomKey].norwegian};
+    const correct = allWords[Math.floor(Math.random() * allWords.length)];
+    //gets the other words
     const others = getRandomItems(
-      allWordsslovak.filter((w) => w.english !== correct.english),
+      allWords.filter((w) => w.english !== correct.english),
       3
     );
     //shuffles the options
@@ -66,10 +60,7 @@ function WordQuiz() {
   };
 
   return (
-    <div className='container'>
-        <div className='lang-choices'>
-
-        </div>
+    <div>
       <h2>What is the Slovak word for: <em>{question?.english}</em>?</h2>
       <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
         {options.map((opt, idx) => (
