@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import slovakEnglishWords from '../assets/json/english-to-slovak.json';
+import languageButton from './LanguageButton';
 
 //this defines the shape of a data object in type script
 type WordEntry = {
@@ -38,7 +39,8 @@ function WordQuiz() {
 
   const generateQuestion = () => {
     //gets the words
-    const allWords: WordEntry[] = Object.values(slovakEnglishWords.animals);
+    if (languageButton === null) return;
+    const allWords: WordEntry[] = Object.values(slovakEnglishWords).flatMap((category) => Object.values(category));
     //choses the correct one
     const correct = allWords[Math.floor(Math.random() * allWords.length)];
     //gets the other words

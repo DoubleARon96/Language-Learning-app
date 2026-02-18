@@ -2,7 +2,7 @@ import { useState } from 'react';
 import slovakEnglishWords from '../assets/json/english-to-slovak.json';
 import norwegianEnglishWords from '../assets/json/english-to-norwegian.json';
 
-function languageButton(){
+function LanguageButton(){
     type WordsData = typeof slovakEnglishWords | typeof norwegianEnglishWords;
 
     const [selectedWords, setSelectedWords] = useState<WordsData |null>(null);
@@ -12,7 +12,7 @@ function languageButton(){
       <ul>
         <li><button onClick={()=> setSelectedWords(slovakEnglishWords)}>Slovak</button></li>
         <li><button onClick={()=> setSelectedWords(norwegianEnglishWords)}>Norwegian</button></li>
-        <li><button></button></li>
+        <li><button onClick={()=> setSelectedWords(null)}>Clear</button></li>
       </ul>
       {selectedWords && (<pre>{JSON.stringify(selectedWords, null, 2)}</pre>
     )}
@@ -20,4 +20,4 @@ function languageButton(){
 
 );
 }
-export default languageButton;
+export default LanguageButton;
