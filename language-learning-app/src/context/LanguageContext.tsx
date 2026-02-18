@@ -1,16 +1,25 @@
-import { createContext, useState } from 'react';
+import { createContext, useState, useContext } from "react";
 
-export const languageContext = createContext({
-  selectedWords: null,
-  setSelectedWords: (_value: any) => {}
-});
+type WordsData = any;//Replace later with proper type
+
+interface LanguageContextType {
+  selectedWords: WordsData | null;
+  setSelectedWords: (value: WordsData | null) => void;
+}
+export const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [selectedWords, setSelectedWords] = useState<any>(null);
 
   return (
-    <languageContext.Provider value={{ selectedWords, setSelectedWords }}>
+    <LanguageContext.Provider value={{ selectedWords, setSelectedWords }}>
       {children}
-    </languageContext.Provider>
+    </LanguageContext.Provider>
   );
+}
+export function useLanguage() {
+  const ctx = useContext(LanguageContext);
+  if (!ctx) throw new Error("useLanguage must be used inside LanguageProvider");
+  return ctx;
 }

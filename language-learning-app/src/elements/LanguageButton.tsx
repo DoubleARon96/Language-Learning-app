@@ -1,12 +1,11 @@
 import { useState } from 'react';
+import { useLanguage } from "../context/LanguageContext";
 import slovakEnglishWords from '../assets/json/english-to-slovak.json';
 import norwegianEnglishWords from '../assets/json/english-to-norwegian.json';
 
 function LanguageButton(){
     type WordsData = typeof slovakEnglishWords | typeof norwegianEnglishWords;
-
-    const [selectedWords, setSelectedWords] = useState<WordsData |null>(null);
-    
+    const { selectedWords, setSelectedWords } = useLanguage();
   return(
 <div>
       <ul>
