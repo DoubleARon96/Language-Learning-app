@@ -1,19 +1,16 @@
 import { useState, useEffect } from 'react';
-import slovakEnglishWords from '../assets/json/english-to-slovak.json';
-import languageButton from './LanguageButton';
-
+import { useLanguage } from "../context/LanguageContext";
 //this defines the shape of a data object in type script
 type WordEntry = {
   english: string;
-  slovak: string;
+  slovak?: string;
+  norwegian?: string;
 };
-// this makes worldmap have a set data as a string and that string will be from wordentry
+
+// this makes wordmap have a set data as a string and that string will be from wordentry
 type WordMap = Record<string, WordEntry>;
 /**
- * the T lets it accept any type
- * [...arr] makes a copy of the array so the original isnt mutated.
- *  .sort(() => 0.5 - Math.random()) this randomly sorts the array
-
+ getRandomItems is a utility function that takes an array and a count, shuffles the array, and returns a specified number of random items from it. This is useful for generating quiz options in your language learning app.
 */
 function getRandomItems<T>(arr: T[], count: number): T[] {
   const shuffled = [...arr].sort(() => 0.5 - Math.random());
@@ -21,6 +18,7 @@ function getRandomItems<T>(arr: T[], count: number): T[] {
 }
 
 function WordQuiz() {
+  const { selectedWords } = useLanguage(); 
     // this sets the correct answer
   const [question, setQuestion] = useState<WordEntry | null>(null);
     // this sets all the options and 1 will be correct
@@ -35,12 +33,12 @@ function WordQuiz() {
    */
   useEffect(() => {
     generateQuestion();
-  }, []);
+  }, [selectedWords]); // Regenerate question when selectedWords changes
 
   const generateQuestion = () => {
     //gets the words
-    if (languageButton === null) return;
-    const allWords: WordEntry[] = Object.values(slovakEnglishWords).flatMap((category) => Object.values(category));
+    if (!selectedWords) return;
+    const allWords: WordEntry[] = Object.values(selectedWords).flatMap((category) => Object.values(category as WordMap));
     //choses the correct one
     const correct = allWords[Math.floor(Math.random() * allWords.length)];
     //gets the other words
@@ -60,6 +58,10 @@ function WordQuiz() {
   const handleSelect = (option: WordEntry) => {
     setSelected(option);
   };
+
+  if (!selectedWords) {
+    return <div>Please select a language to start the quiz.</div>;
+  }
 
   return (
     <div>
@@ -95,17 +97,4 @@ function WordQuiz() {
   );
 }
 
-export default WordQuiz;
-
-/*function Words(){
-    const conjoiningWords = slovakEnglishWords.conjoining_words;
-    return(
-        <div>
-            {Object.entries(conjoiningWords).map(([key, value])=>(
-                <div key ={key}>
-                    <strong>{value.english}</strong>-{value.slovak}
-                </div>
-            ))}
-        </div>
-    );
-}*/
+export default WordQuiz; 

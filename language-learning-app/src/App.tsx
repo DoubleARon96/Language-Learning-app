@@ -1,15 +1,20 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
 import Menu from './elements/Menu.js';
 import Words from './elements/Words.js';
 import LanguageButton from './elements/LanguageButton.tsx';
 import { useLanguage } from "./context/LanguageContext";
 import { LanguageProvider } from './context/LanguageContext.tsx';
+import slovakEnglishWords from "./assets/json/english-to-slovak.json";
+import norwegianEnglishWords from './assets/json/english-to-norwegian.json';
 import './App.css';
 
 
 
 function App() {
-  const { selectedWords } = useLanguage();
+  type WordsData = typeof slovakEnglishWords | typeof norwegianEnglishWords;
+ const { selectedWords } = useLanguage();
+
 
   return (
     <LanguageProvider>
