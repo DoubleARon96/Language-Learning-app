@@ -3,15 +3,17 @@ import slovakEnglishWords from '../assets/json/english-to-slovak.json';
 import norwegianEnglishWords from '../assets/json/english-to-norwegian.json';
 
 function LanguageButton() {
-  const { selectedWords, setSelectedWords } = useLanguage();
-
+  const { setSelectedWords, setSelectedLanguage } = useLanguage();
   function handleLanguageChange(language: string) {
     if (language === 'slovak') {
       setSelectedWords(slovakEnglishWords);
+      setSelectedLanguage('slovak');
     } else if (language === 'norwegian') {
       setSelectedWords(norwegianEnglishWords);
+      setSelectedLanguage('norwegian');
     } else {
       setSelectedWords(null);
+      setSelectedLanguage(null);
     }
   }
 

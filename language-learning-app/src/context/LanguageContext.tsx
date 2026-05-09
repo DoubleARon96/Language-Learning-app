@@ -5,15 +5,19 @@ type WordsData = any;//Replace later with proper type
 interface LanguageContextType {
   selectedWords: WordsData | null;
   setSelectedWords: (value: WordsData | null) => void;
+  selectedLanguage: "slovak" | "norwegian" | null;
+  setSelectedLanguage: (value: "slovak" | "norwegian" | null) => void;
 }
 export const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [selectedWords, setSelectedWords] = useState<any>(null);
+  const [selectedLanguage, setSelectedLanguage] = useState<"slovak" | "norwegian" | null>(null);
+
 
   return (
-    <LanguageContext.Provider value={{ selectedWords, setSelectedWords }}>
+    <LanguageContext.Provider value={{ selectedWords, setSelectedWords, selectedLanguage, setSelectedLanguage }}>
       {children}
     </LanguageContext.Provider>
   );
