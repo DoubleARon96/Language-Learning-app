@@ -8,6 +8,8 @@ import { LanguageProvider } from './context/LanguageContext.tsx';
 import slovakEnglishWords from "./assets/json/english-to-slovak.json";
 import norwegianEnglishWords from './assets/json/english-to-norwegian.json';
 import './App.css';
+import './assets/css/styles.css';
+
 
 
 
@@ -18,6 +20,10 @@ function App() {
 
   return (
     <LanguageProvider>
+      <head>
+        <title>Language Learning App</title>
+        <link rel="stylesheet" href="./assets/css/styles.css" />
+      </head>
       <div>
         <Menu />
       </div>

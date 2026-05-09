@@ -19,10 +19,10 @@ function LanguageButton() {
 
   return (
     <div>
-      <ul>
-        <li><button onClick={() => handleLanguageChange('slovak')}>Slovak</button></li>
-        <li><button onClick={() => handleLanguageChange('norwegian')}>Norwegian</button></li>
-        <li><button onClick={() => handleLanguageChange('clear')}>Clear</button></li>
+      <ul className="language-buttons">
+        <li className="language-button-items"><button onClick={() => handleLanguageChange('slovak')}>Slovak</button></li>
+        <li className="language-button-items"><button onClick={() => handleLanguageChange('norwegian')}>Norwegian</button></li>
+        <li className="language-button-items"><button onClick={() => handleLanguageChange('clear')}>Clear</button></li>
       </ul>
     </div>
   );
