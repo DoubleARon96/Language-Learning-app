@@ -1,0 +1,35 @@
+{
+    "slovak": {
+        "tip1": "Tip 1: Use flashcards to memorize vocabulary.",
+        "tip2": "Tip 2: Practice speaking with native speakers.",
+        "tip3": "Tip 3: Watch movies and listen to music in the target language.",
+        "tip4":"Hovorím = I say/speak eg hovorím po anglicky ",
+        "tip5":"Hovoríš = you say eg hovoríš po slovensky",
+        "tip6":"Hovoriť = to speak this is the natural one",
+        "tip7": "čo si povedal = what did you say", 
+        "tip8": "Tuto noc = this night",
+        "tip9":"Není Zac = your welcome", 
+        "tip10":"Chcel by si íst do posilňovne= would you like to go gym",
+        "tip11": "Máte = do you have",
+        "tip12":"Zostanem = stay or i stay",
+        "tip13":"Ja som prišiel domov = i have arrived home", 
+        "tip14": "Neboj = don't worry", 
+        "tip15": "Pripravený= ready or in context of getting ready",
+        "trip16": "Vymeniť = exchange", 
+        "trip17": "Mohol = could, eg you could ski. Mohli by ste lyžovať", 
+        "trip18": "Nezabudnite = don't forget", 
+        "trip19": "Ukáž mi = show me" 
+
+    },
+    "english": {
+        "tip1": "Tip 1: Use flashcards to memorize vocabulary.",
+        "tip2": "Tip 2: Practice speaking with native speakers.",
+        "tip3": "Tip 3: Watch movies and listen to music in the target language."
+    },
+    "norwegian": {
+        "tip1": "",
+        "tip2": "",
+        "tip3": ""
+    }
+
+}

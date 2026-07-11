@@ -1,18 +1,47 @@
 import { useLanguage } from "../context/LanguageContext";
+import data from "../assets/json/tips-and-ticks-data.json" with {type: "json"};
+import { use } from "react";
 
 console.log("useLanguage", useLanguage);
 
+console.log("data", data);
 
-function tipsAndHints() {
+const tableData = structuredClone(data);
+const slovakData = tableData.slovak;
+const norwegianData = tableData.norwegian;
+const englishData = tableData.english
+
+
+function getTipsFromVariable(data: any) {
+    for (const tips of Object.values(data)) {
+
+        
+        console.log(tips)
+    }
+    return
+}
+getTipsFromVariable(slovakData)
+
+function TipsAndHints() {
     return (
-        <div>
-            <ul className="tipsAndHints">
-                <li>Tip 1: Use context clues to understand new words.</li>
-                <li>Tip 2: Practice speaking regularly to improve fluency.</li>
-                <li>Tip 3: Read aloud to enhance pronunciation.</li>
-            </ul>
-        </div>
-
+        <section>
+            <div>
+                <h2>Tips For Slovak</h2>
+                <ul className="tipsAndHints">
+                    {Object.values(slovakData).map((tiptext, i)=> (
+                        <li key={i}>{tiptext}</li>
+                    ))}
+                </ul>
+            </div>
+            <div>
+                <h2>Tips For English</h2>
+                <ul className="tipsAndHints">
+                    {Object.values(englishData).map((tiptext, i)=> (
+                        <li key={i}>{tiptext}</li>
+                    ))}
+                </ul>
+            </div>
+        </section>
     );
 }
-export default tipsAndHints
+export default TipsAndHints

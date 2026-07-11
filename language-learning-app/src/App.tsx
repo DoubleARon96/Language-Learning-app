@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Menu from './elements/Menu.js';
 import Words from './elements/Words.js';
+import TipsAndHints from './elements/Tricks-and-hint.tsx';
+import Home from './elements/Home';
 import LanguageButton from './elements/LanguageButton.tsx';
 import { LanguageProvider } from './context/LanguageContext.tsx';
 import './App.css';
@@ -18,10 +20,10 @@ function App() {
         <LanguageButton />
 
         <Routes>
-          <Route path="/" element={<Words />} />
-          <Route path="/word-game" element={<div>Word Game Page</div>} />
-          <Route path="/crossword" element={<div>Crossword Page</div>} />
-          <Route path="/tips-and-hints" element={<div>Tips and Hints Page</div>} />
+          <Route path="/" element={<Home />} />
+          <Route path="/word-game" element={<Words />} />
+          <Route path="/crossword" element={<div>Crossword Page Is under Construction</div>} />
+          <Route path="/tips-and-hints" element={<TipsAndHints />} />
         </Routes>
 
       </BrowserRouter>
