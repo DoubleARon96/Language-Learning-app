@@ -19,6 +19,10 @@ function getRandomItems<T>(arr: T[], count: number): T[] {
 function WordQuiz() {
   const { selectedWords, selectedLanguage } = useLanguage();
 
+  const [correctCount, setCorrectCount] = useState(0);
+  const [questionsAnswered, setQuestionsAnswered] = useState(0);
+  const [wrongWords, setWrongWords] = useState<WordEntry[]>([]);
+
   const [question, setQuestion] = useState<WordEntry | null>(null);
   const [options, setOptions] = useState<WordEntry[]>([]);
   const [selected, setSelected] = useState<WordEntry | null>(null);
@@ -72,6 +76,20 @@ function WordQuiz() {
 
   const handleSelect = (option: WordEntry) => {
     setSelected(option);
+    setQuestionsAnswered(prev => prev + 1);
+    setWrongWords(wrongWords => option[selectedLanguage as keyof WordEntry] !== question?.[selectedLanguage as keyof WordEntry]
+      ? [...wrongWords, option]
+      : wrongWords
+    );
+    
+     /**this if condition checks that the selected option
+      is not a null first and then checks if the selected
+      option is equal to the question's answer in the selected language.
+       this also checks if the language is selected too. */
+    const isCorrect = option[selectedLanguage as keyof WordEntry] === question?.[selectedLanguage as keyof WordEntry];
+    if (isCorrect) {
+      setCorrectCount(prev => prev + 1);
+    }
   };
 
   if (!selectedWords || !selectedLanguage) {
@@ -79,41 +97,55 @@ function WordQuiz() {
   }
 
   return (
-  <div>
-    <h2>
-      What is the word for: <em>{question?.english}</em>
-    </h2>
+    <section>
+      <div>
+        <h2>
+          What is the word for: <em>{question?.english}</em>
+        </h2>
 
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-      {options.map((opt, idx) => (
-        <button
-          key={idx}
-          onClick={() => handleSelect(opt)}
-          style={{
-            backgroundColor:
-              selected === null
-                ? ''
-                : opt[selectedLanguage] === question?.[selectedLanguage]
-                  ? 'lightgreen'
-                  : selected === opt
-                    ? 'salmon'
-                    : '',
-          }}
-        >
-          {opt[selectedLanguage]}
-        </button>
-      ))}
-    </div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+          {options.map((opt, idx) => (
+            <button
+              key={idx}
+              onClick={() => handleSelect(opt)}
+              style={{
+                backgroundColor:
+                  selected === null
+                    ? ''
+                    : opt[selectedLanguage] === question?.[selectedLanguage]
+                      ? 'lightgreen'
+                      : selected === opt
+                        ? 'salmon'
+                        : '',
+              }}
+            >
+              {opt[selectedLanguage]}
+            </button>
+          ))}
+        </div>
 
-    {selected && (
-      <div style={{ marginTop: '1rem' }}>
-        {selected[selectedLanguage] === question?.[selectedLanguage]
-          ? '✅ Correct!'
-          : '❌ Try again.'}
-        <br />
-        <button onClick={generateQuestion}>Next</button>
+        {selected && (
+          <div style={{ marginTop: '1rem' }}>
+            {selected[selectedLanguage] === question?.[selectedLanguage]
+              ? '✅ Correct!'
+              : '❌ Try again.'}
+            <br />
+            <button onClick={generateQuestion}>Next</button>
+          </div>
+        )}
       </div>
-    )}
-  </div>
-);}
+      <div className="word-quiz-counter">
+        <p className="button">Correct Answers: {correctCount}</p>
+        <p className="button">Wrong Answers: {questionsAnswered - correctCount}</p>
+        <p className="button">Total Questions: {questionsAnswered}</p>
+      </div>
+         if (wrongWords.length === 0) {
+      <div className="wrong-words">
+        <h3>Wrong Words Review</h3>
+       
+      </div>
+}
+    </section>
+  );
+}
 export default WordQuiz;
