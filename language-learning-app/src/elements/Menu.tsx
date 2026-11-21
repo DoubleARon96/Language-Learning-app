@@ -9,6 +9,7 @@ function Menu() {
         <li><button onClick={() => navigate('/')}>Home</button></li>
         <li><button onClick={() => navigate('/word-game')}>Word Game</button></li>
         <li><button onClick={() => navigate('/crossword')}>Crossword</button></li>
+        <li><button onClick={() => navigate('/reading-tests')}>Reading Tests</button></li>
         <li><button onClick={() => navigate('/tips-and-hints')}>Tips and Hints</button></li>
       </ul>
     </div>

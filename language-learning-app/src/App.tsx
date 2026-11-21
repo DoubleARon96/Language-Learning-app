@@ -7,6 +7,7 @@ import LanguageButton from './elements/LanguageButton.tsx';
 import { LanguageProvider } from './context/LanguageContext.tsx';
 import './App.css';
 import './assets/css/styles.css';
+import ReadingTests from './elements/ReadingTests.tsx';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/word-game" element={<Words />} />
           <Route path="/crossword" element={<div>Crossword Page Is under Construction</div>} />
+          <Route path="/reading-tests" element={<ReadingTests />} />
           <Route path="/tips-and-hints" element={<TipsAndHints />} />
         </Routes>
 

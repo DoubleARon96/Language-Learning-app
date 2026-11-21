@@ -1,49 +1,41 @@
-{"stories":   {
+{
+  "stories": {
     "slovak": {
-        "level-a1": {
-            "opening-a-shop": {
-                "slovak": ["Volám sa Peter. Chcem mať vlastný obchod.
-Dnes je veľký deň. Otváram malý obchod v centre mesta. Predávam ovocie a zeleninu.
-Ráno prídem o siedmej hodine. Otvorím dvere a pripravím tovar. Jablká sú červené a banány sú žlté.
-Prvý zákazník príde o ôsmej hodine. Kúpi si dve jablká a jeden banán. Som veľmi rád.
-Počas dňa príde veľa ľudí. Niektorí kupujú ovocie, iní kupujú zeleninu.
-Večer zatvorím obchod. Som unavený, ale šťastný. Môj prvý deň je úspešný."],
-"english": ["My name is Peter. I want to have my own shop.
-Today is a big day. I am opening a small shop in the city center. I sell fruit and vegetables.
-I come in at seven o'clock in the morning. I open the doors and prepare the goods. The apples are red and the bananas are yellow.
-The first customer comes at eight o'clock. He buys two apples and one banana. I am very happy.
-During the day, many people come. Some buy fruit, others buy vegetables.
-In the evening, I close the shop. I am tired but happy. My first day is successful."]
-                },
-                "Favorite-movie": {
-                    "slovak": ["Môj obľúbený film sa volá Leví kráľ.
-Tento film pozerám často. Je o mladom levovi, ktorý sa volá Simba.
-Simba žije v Afrike so svojou rodinou. Má veľa priateľov. Prežije veľa dobrodružstiev.
-Film je zaujímavý a niekedy aj smutný. Páči sa mi hudba a postavy.
-Najradšej mám Simbu, pretože je odvážny a dobrý.
-Film pozerám cez víkend s rodinou alebo s priateľmi. Vždy sa mi páči."],
-"english": ["My favorite movie is called The Lion King.
-I watch this movie often. It is about a young lion named Simba.
-Simba lives in Africa with his family. He has many friends. He goes through many adventures.
-The movie is interesting and sometimes sad. I like the music and the characters.
-My favorite character is Simba because he is brave and kind.
-I watch the movie on weekends with my family or friends. I always enjoy it."]
-                    },
-                    "Training-in-a-Gym": {
-                        "slovak": ["Každý týždeň chodím do posilňovne.
-Do posilňovne chodím trikrát za týždeň. Chcem byť zdravý a silný.
-Najprv sa rozcvičím. Potom behám na bežiacom páse desať minút.
-Cvičím s činkami a robím drepy. Niekedy cvičím aj na bicykli.
-Po tréningu pijem vodu a oddychujem. Cítim sa dobre.
-Tréning je niekedy ťažký, ale mám ho rád. Chcem sa stále zlepšovať."],
-"english": ["Every week I go to the gym. I go to the gym three times a week.
-I want to be healthy and strong.
-First, I warm up. Then I run on the treadmill for ten minutes.
-I exercise with dumbbells and do squats. Sometimes I also exercise on the bike.
-After the workout, I drink water and rest. I feel good.
-The training is sometimes hard, but I like it. I want to keep improving."]
-                            }
-                        }
-                    }
-                }
-            }
+      "level-a1": {
+        "opening-a-shop": {
+          "slovak": [
+            "Volám sa Peter. Chcem mať vlastný obchod.\nDnes je veľký deň. Otváram malý obchod v centre mesta. Predávam ovocie a zeleninu.\nRáno prídem o siedmej hodine. Otvorím dvere a pripravím tovar. Jablká sú červené a banány sú žlté.\nPrvý zákazník príde o ôsmej hodine. Kúpi si dve jablká a jeden banán. Som veľmi rád.\nPočas dňa príde veľa ľudí. Niektorí kupujú ovocie, iní kupujú zeleninu.\nVečer zatvorím obchod. Som unavený, ale šťastný. Môj prvý deň je úspešný."
+          ],
+          "english": [
+            "My name is Peter. I want to have my own shop.\nToday is a big day. I am opening a small shop in the city center. I sell fruit and vegetables.\nI come in at seven o'clock in the morning. I open the doors and prepare the goods. The apples are red and the bananas are yellow.\nThe first customer comes at eight o'clock. He buys two apples and one banana. I am very happy.\nDuring the day, many people come. Some buy fruit, others buy vegetables.\nIn the evening, I close the shop. I am tired but happy. My first day is successful."
+          ]
+        },
+        "Favorite-movie": {
+          "slovak": [
+            "Môj obľúbený film sa volá Leví kráľ.\nTento film pozerám často. Je o mladom levovi, ktorý sa volá Simba.\nSimba žije v Afrike so svojou rodinou. Má veľa priateľov. Prežije veľa dobrodružstiev.\nFilm je zaujímavý a niekedy aj smutný. Páči sa mi hudba a postavy.\nNajradšej mám Simbu, pretože je odvážny a dobrý.\nFilm pozerám cez víkend s rodinou alebo s priateľmi. Vždy sa mi páči."
+          ],
+          "english": [
+            "My favorite movie is called The Lion King.\nI watch this movie often. It is about a young lion named Simba.\nSimba lives in Africa with his family. He has many friends. He goes through many adventures.\nThe movie is interesting and sometimes sad. I like the music and the characters.\nMy favorite character is Simba because he is brave and kind.\nI watch the movie on weekends with my family or friends. I always enjoy it."
+          ]
+        },
+        "Training-in-a-Gym": {
+          "slovak": [
+            "Každý týždeň chodím do posilňovne.\nDo posilňovne chodím trikrát za týždeň. Chcem byť zdravý a silný.\nNajprv sa rozcvičím. Potom behám na bežiacom páse desať minút.\nCvičím s činkami a robím drepy. Niekedy cvičím aj na bicykli.\nPo tréningu pijem vodu a oddychujem. Cítim sa dobre.\nTréning je niekedy ťažký, ale mám ho rád. Chcem sa stále zlepšovať."
+          ],
+          "english": [
+            "Every week I go to the gym. I go to the gym three times a week.\nI want to be healthy and strong.\nFirst, I warm up. Then I run on the treadmill for ten minutes.\nI exercise with dumbbells and do squats. Sometimes I also exercise on the bike.\nAfter the workout, I drink water and rest. I feel good.\nThe training is sometimes hard, but I like it. I want to keep improving."
+          ]
+        }
+      }
+    },
+    "norwegian": {
+      "level-a1": {
+        "opening-a-shop": {
+          "norwegian": [
+            "Jeg heter Peter. Jeg vil ha min egen butikk.\nI dag er en stor dag. Jeg åpner en liten butikk i sentrum. Jeg selger frukt og grønnsaker.\nJeg kommer klokken syv om morgenen. Jeg åpner dørene og gjør varene klare.\nDen første kunden kommer klokken åtte. Han kjøper to epler og én banan.\nI løpet av dagen kommer mange mennesker. Noen kjøper frukt, andre kjøper grønnsaker.\nOm kvelden stenger jeg butikken. Jeg er trøtt, men glad. Min første dag er vellykket."
+          ]
+        }
+      }
+    }
+  }
+}
